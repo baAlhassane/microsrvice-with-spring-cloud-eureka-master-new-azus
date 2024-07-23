@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      username: mongodb
+      password: draslom3
+      host: localhost
+      port: 27017
+      database: custommer
+      authentication-database: admin
+
+server:
+  port: 8090
