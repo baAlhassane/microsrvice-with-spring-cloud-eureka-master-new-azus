@@ -13,6 +13,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CustomerController {
     private final CustomerService customerService;
+
+
     @PostMapping
     public ResponseEntity<String> createCustomer(
             @RequestBody
@@ -32,7 +34,27 @@ public class CustomerController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Customer>> findAll(){
-        return ResponseEntity.ok(customerService.findAll());
+    public ResponseEntity<List<CustomerResponse>> findAll(){
+        return ResponseEntity.ok(customerService.findAllCustomers());
+    }
+
+
+    @GetMapping("exists/{customer-id}")
+    public ResponseEntity<Boolean> existCustomerById(
+           @PathVariable( "customer-id") String custommerId ){
+        return  ResponseEntity.ok(customerService.existById(custommerId));
+    }
+
+    @GetMapping("exists/{customer-id}")
+    public ResponseEntity<CustomerResponse> findCustomerById(
+            @PathVariable( "customer-id") String custommerId ){
+        return  ResponseEntity.ok(customerService.findCustomerById(custommerId));
+    }
+    @DeleteMapping("/{customer-id}")
+    public ResponseEntity<Void> deleteCustomerById(
+            @PathVariable("customer-id") String customerId) {
+        customerService.deleteCustomerById(customerId);
+        return ResponseEntity.accepted().build();
+
     }
 }

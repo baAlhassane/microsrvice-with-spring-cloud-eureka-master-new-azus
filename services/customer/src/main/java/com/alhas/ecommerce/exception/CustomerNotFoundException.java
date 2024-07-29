@@ -1,4 +1,4 @@
-package com.alhas.ecommerce.customer.exception;
+package com.alhas.ecommerce.exception;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

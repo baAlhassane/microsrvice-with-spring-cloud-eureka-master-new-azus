@@ -53,14 +53,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-<<<<<<< HEAD
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<scope>annotationProcessor</scope>
 		</dependency>
-=======
->>>>>>> 1229660f3504538623c32d5710e0f3f9ae624ef1
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
