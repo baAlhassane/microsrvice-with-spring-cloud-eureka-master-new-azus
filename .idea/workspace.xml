@@ -5,24 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d6a5c95-76d9-4a80-ada8-963348efedf9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/microsrvice-with-spring-cloud-eureka-master.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/customer/src/main/java/com/alhas/ecommerce/customer/CustomerResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/customer/src/main/java/com/alhas/ecommerce/handler/ErroResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/customer/src/main/java/com/alhas/ecommerce/handler/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/e-commerce-micro-service.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/customer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/customer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/customer/src/main/java/com/alhas/ecommerce/customer/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/customer/src/main/java/com/alhas/ecommerce/customer/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/customer/src/main/java/com/alhas/ecommerce/customer/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/customer/src/main/java/com/alhas/ecommerce/customer/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/customer/src/main/java/com/alhas/ecommerce/customer/customerMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/customer/src/main/java/com/alhas/ecommerce/customer/customerMapping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/customer/src/main/java/com/alhas/ecommerce/customer/exception/CustomerNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/customer/src/main/java/com/alhas/ecommerce/exception/CustomerNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/config-serveur/src/main/resources/configurations/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/config-serveur/src/main/resources/configurations/product-service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/product/src/main/java/com/alhas/ecommerce/category/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/product/src/main/java/com/alhas/ecommerce/product/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/product/src/main/java/com/alhas/ecommerce/ProductApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/product/src/main/java/com/alhas/ecommerce/ProductApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/product/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/services/product/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +54,7 @@
     "Spring Boot.ConfigServeurApplication.executor": "Run",
     "Spring Boot.CustomerApplication.executor": "Run",
     "Spring Boot.DiscoveryApplication.executor": "Run",
+    "Spring Boot.ProductApplication.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/alhas/Documents/web/java/microsrvice-with-spring-cloud-eureka-master/services/product/pom.xml",
@@ -71,14 +64,26 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
+    "settings.editor.selected.configurable": "database.query.execution",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.alhas.ecommerce.product" />
       <recent name="com.alhas.ecommerce.handler" />
       <recent name="com.alhas.ecommerce.customer" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alhas\Documents\web\java\microsrvice-with-spring-cloud-eureka-master\services\customer\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -90,7 +95,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.CustomerApplication">
+  <component name="RunManager" selected="Spring Boot.ProductApplication">
     <configuration name="ConfigServeurApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="config-serveur" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.alhas.configserveur.ConfigServeurApplication" />
@@ -118,8 +123,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProductApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="product" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.alhas.ecommerce.ProductApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.alhas.ecommerce.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ProductApplication" />
         <item itemvalue="Spring Boot.CustomerApplication" />
       </list>
     </recent_temporary>
@@ -147,6 +166,14 @@
       <workItem from="1722075986549" duration="7556000" />
       <workItem from="1722103085027" duration="3853000" />
       <workItem from="1722108980525" duration="2018000" />
+      <workItem from="1722279335681" duration="3318000" />
+      <workItem from="1722289448210" duration="18000" />
+      <workItem from="1722291226196" duration="1303000" />
+      <workItem from="1722359386172" duration="1144000" />
+      <workItem from="1722368551985" duration="3772000" />
+      <workItem from="1722448346237" duration="5381000" />
+      <workItem from="1722453800885" duration="2060000" />
+      <workItem from="1722456645759" duration="4263000" />
     </task>
     <servers />
   </component>
