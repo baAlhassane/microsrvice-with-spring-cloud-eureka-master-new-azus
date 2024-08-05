@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-241.18034.62">
-    <data-source name="postgres@localhost" uuid="36c27ecb-4259-4a5f-a139-1ca7f867e5a6">
+    <data-source name="postgres@localhost" uuid="5ff512b0-6ee8-41b9-8837-bb9bd12cefdb">
       <database-info product="PostgreSQL" version="16.3" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.6.0" dbms="POSTGRES" exact-version="16.3" exact-driver-version="42.6">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
@@ -15,6 +15,11 @@
           </node>
         </introspection-scope>
       </schema-mapping>
+    </data-source>
+    <data-source name="customer@localhost" uuid="e3c6a395-cf1a-449a-a1c0-ba676ff65f8c">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MONGO" />
+      <user-name>mongodb</user-name>
+      <schema-mapping />
     </data-source>
   </component>
 </project>
