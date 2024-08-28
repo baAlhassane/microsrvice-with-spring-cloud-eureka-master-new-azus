@@ -20,6 +20,7 @@ import java.util.List;
 @Table(name="customer order")
 public class Order {
     @Id
+    @GeneratedValue
     private Integer id;
     private String reference;
     private BigDecimal totalAmont;

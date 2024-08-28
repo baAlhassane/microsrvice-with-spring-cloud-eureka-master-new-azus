@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class OrderProducer {
 
-    private final KafkaTemplate kafkaTemplate;
+    private final  KafkaTemplate<String, OrderConfirmation> kafkaTemplate;
 
     public void sendOrderConfirmation(OrderConfirmation orderConfirmation){
         log.info(" sending order confirmation: {}", orderConfirmation);

@@ -11,7 +11,7 @@ public record PaymentMapper() {
                 .id(paymentRequest.id())
                 .orderId(paymentRequest.orderId())
                 .paymentMethod(paymentRequest.paymentMethod())
-                .amount(paymentRequest.amoubn())
+                .amount(paymentRequest.amount())
                 .build();
     }
 }

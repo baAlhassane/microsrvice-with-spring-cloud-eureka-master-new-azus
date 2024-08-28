@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-@NoArgsConstructor(force = true)
+///@NoArgsConstructor(force = true)
 public class ProductService {
 
 
@@ -32,7 +32,7 @@ public class ProductService {
         var productIds=requestProductPurchases.stream()
                 .map(ProductPurchaseRequest::productId)
                 .toList();
-            var storeProducts=productRepository.finAllByIdInOrderById(productIds);
+            var storeProducts=productRepository.findAllByIdInOrderById(productIds);
             if(productIds.size()!=storeProducts.size()){
                 throw new ProductPurchaseException("One or more products does not exists ");
             }

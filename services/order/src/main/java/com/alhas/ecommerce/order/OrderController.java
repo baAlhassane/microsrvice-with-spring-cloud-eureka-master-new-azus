@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/orders")
 @RequiredArgsConstructor
-public class OrderController {
+public class  OrderController {
 
 private final OrderService orderService;
 @PostMapping
@@ -26,9 +26,9 @@ return ResponseEntity.ok(orderService.createdOrder(orderRequest));
 
     }
 
-    @GetMapping("/{oder-id}")
+    @GetMapping("/{order-id}")
     public ResponseEntity<OrderResponse> findOrderById(
-            @PathVariable("oder-id") Integer oderId){
+            @PathVariable("order-id") Integer oderId){
     return ResponseEntity.ok(orderService.findById(oderId));
 
     }

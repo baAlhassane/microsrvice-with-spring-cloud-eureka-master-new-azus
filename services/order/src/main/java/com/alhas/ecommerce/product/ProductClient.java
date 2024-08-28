@@ -1,5 +1,5 @@
 package com.alhas.ecommerce.product;
-
+/*
 import com.alhas.ecommerce.exception.BusinessException;
 import com.alhas.ecommerce.order.PurchaseRequest;
 import lombok.RequiredArgsConstructor;
@@ -13,6 +13,24 @@ import java.util.List;
 
 import static org.springframework.http.HttpHeaders.CONTENT_TYPE;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
+*/
+
+
+import com.alhas.ecommerce.exception.BusinessException;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import java.util.List;
+
+import static org.springframework.http.HttpHeaders.CONTENT_TYPE;
+import static org.springframework.http.HttpMethod.POST;
+import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @Service
 @RequiredArgsConstructor
@@ -21,7 +39,7 @@ public class ProductClient {
     private String productUrl;
     private final RestTemplate restTemplate;
 
-    public List<PurchaseResponse> purchaseProduct(List<PurchaseRequest> purchaseRequestsBody)  {
+    public List<PurchaseResponse> purchaseProducts(List<PurchaseRequest> purchaseRequestsBody)  {
         HttpHeaders headers = new HttpHeaders();
         headers.set(CONTENT_TYPE, APPLICATION_JSON_VALUE);
 
@@ -31,7 +49,7 @@ public class ProductClient {
 
         ResponseEntity<List<PurchaseResponse>> responseEntity=restTemplate.exchange(
                 productUrl+"/purchase",
-                HttpMethod.POST,
+                POST,
                 requestEntity,
                 responseType
         );

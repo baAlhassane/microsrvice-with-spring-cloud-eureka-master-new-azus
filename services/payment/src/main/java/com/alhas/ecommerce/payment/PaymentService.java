@@ -1,24 +1,29 @@
 package com.alhas.ecommerce.payment;
 
-import com.alhas.ecommerce.payment.notification.NotificationProducer;
-import com.alhas.ecommerce.payment.notification.PaymentNotificationRequest;
+import com.alhas.ecommerce.notification.NotificationProducer;
+import com.alhas.ecommerce.notification.PaymentNotificationRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
 
 @Service
 @RequiredArgsConstructor
 public class PaymentService {
 
-private final PaymentRepository paymentRepository;
+/**
+ * private final PaymentRepository paymentRepository;
+ */
+    private final PaymentRepository paymentRepository;
  private final PaymentMapper paymentMapper;
- private NotificationProducer notificationProducer;
+ private final NotificationProducer notificationProducer;
+
 
     public Integer createPayment(PaymentRequest paymentRequest) {
 
-        var payment=paymentRepository.save(paymentMapper.toPayment(paymentRequest));
-        notificationProducer.sendNotification(new PaymentNotificationRequest(
+        var payment=this.paymentRepository.save(paymentMapper.toPayment(paymentRequest));
+        this.notificationProducer.sendNotification(new PaymentNotificationRequest(
                 paymentRequest.orderReference(),
-                paymentRequest.amoubn(),
+                paymentRequest.amount(),
                 paymentRequest.paymentMethod(),
                 paymentRequest.customer().firstname(),
                 paymentRequest.customer().lastname(),

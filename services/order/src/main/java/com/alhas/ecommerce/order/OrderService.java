@@ -9,9 +9,12 @@ import com.alhas.ecommerce.ordeline.OrderLineService;
 import com.alhas.ecommerce.payment.PaymentClient;
 import com.alhas.ecommerce.payment.PaymentRequest;
 import com.alhas.ecommerce.product.ProductClient;
+import com.alhas.ecommerce.product.PurchaseRequest;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -28,7 +31,7 @@ public class OrderService {
     private final OrderProducer orderProducer;
     private final PaymentClient paymentClient;
 
-
+    @Transactional
     public Integer createdOrder(OrderRequest orderRequest) {
         //1- cheqk thhe customer -> we use openFeign
   var customer=this.customerClient.findCustomerById(orderRequest.customerId())
@@ -36,7 +39,7 @@ public class OrderService {
 
 
         //2- Purchase the products -> microservuce
-      var purchaseProducts=   this.productClient.purchaseProduct(orderRequest.products());
+      var purchaseProducts=   this.productClient.purchaseProducts(orderRequest.products());
 
         //3- persist order
         var order=this.orderRepository.save(orderMapper.toOrder(orderRequest));
